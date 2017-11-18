@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</head>
+    <form action="edit_server.html?nid={{ obj.id }}" method="POST">
+        {% csrf_token %}
+    IP地址：<input type="text" name="ip" value="{{ obj.ip }}"/>
+    端口号：<input type="text" name="port" value="{{ obj.port }}"/>
+    服务名：<input type="text" name="server_name" value="{{ obj.server_name }}"/>
+    <input type="submit" value="提交" />
+</form>
+
+</body>
+</html>

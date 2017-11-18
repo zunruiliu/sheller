@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>发包{{ obj.server_name }}</title>
+    <style type="text/css">
+        #deploy_server_name{
+            font: 45px bolder;
+            color: crimson;
+            margin: 35px;
+        }
+        .submit_btn{
+            margin: 20px 100px ;
+        }
+        .input_class{
+            margin: 40px 50px;
+
+        }
+        #run_btn{
+            margin: 0 0 0 500px;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <form action="deploy_server_action/" method="post">
+        {% csrf_token %}
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;服务名称：<span id="deploy_server_name">{{ obj.server_name }}</span>
+  <div class="input_class">
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 备注:<input type="text" name="remark">
+  </div>
+<div class="input_class">
+    请输入svn路径:<input type="text" size="100" name="svn_path">
+</div>
+    <button type="submit"  id="run_btn" class="btn btn-default">运行</button>
+    </form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加服务器</title>
+</head>
+<body>
+<form action="add_server.html" method="POST">
+    {% csrf_token %}
+    IP地址：<input type="text" name="ip"/>
+    端口号：<input type="text" name="port"/>
+    服务名：<input type="text" name="server_name"/>
+    <input type="submit" value="提交" />
+</form>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{% extends 'html/base.html' %}
+{% block title %}首页{% endblock %}
+{% block content %}
+<div>
+    <h1>添加服务器</h1>
+
+        <form action="add_ip" method="post">
+            {% csrf_token %}
+            <input type="submit" value="提交">
+        </form>
+    </div>
+{% endblock %}
